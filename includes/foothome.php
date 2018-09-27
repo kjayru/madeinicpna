@@ -1,6 +1,6 @@
 <footer id="footer">
 						 
-                         <a href="#home" class="suaveint down">
+                         <a href="#home" class="suave down">
                              <img src="images/arrow-top-plomo.png" alt="v">
                          </a>
                          <div class="contenedor">

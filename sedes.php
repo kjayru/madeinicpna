@@ -61,10 +61,6 @@ include('includes/navbar.php');?>
 	</div>
 
 
-
-
-
-
 	<?php include('includes/foot.php');?>
 	<?php include('includes/footer_int.php');?>
 	<script>

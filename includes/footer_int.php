@@ -7,7 +7,7 @@
     
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 	<script src="//cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-	<script type="text/javascript" src="js/programas.js" ></script>
+	<script type="text/javascript" src="js/programas.js?v=<?php echo uniqid(); ?>" ></script>
     <script type="text/javascript" src="js/picturefill.min.js" ></script>
     <script src="js/selectores.js?v=<?php echo uniqid(); ?>"></script>
     <script>

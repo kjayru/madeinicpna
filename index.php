@@ -227,7 +227,7 @@ La cual premia el esfuerzo y desempeño académico del estudiante, llevándolo c
 								 </ul>
 							</div>
 					
-					<?php include('includes/foot.php');?>
+					<?php include('includes/foothome.php');?>
 
 					</section>
 

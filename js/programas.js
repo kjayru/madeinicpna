@@ -11,4 +11,13 @@ $(document).ready(function() {
   $('.box-modal').removeClass('aparecer');
  
   });
+
+  $('a.suaveint').on('click',function (e) {
+      e.preventDefault();
+       
+      $target = $('.hv_page');
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 800);
+  });
 });

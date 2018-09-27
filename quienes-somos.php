@@ -111,7 +111,7 @@ Asimismo, ese respeto lo enfocamos en ser actores solidarios con la preservaci&o
 
 	
 
-	<?php include('includes/footer.php');?>
+	<?php include('includes/footer_int.php');?>
 
 	
 </body>

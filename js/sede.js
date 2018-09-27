@@ -3,74 +3,13 @@ $(document).ready(function() {
   e.preventDefault();
   $(this).toggleClass('nav-close');
   $('#navigation').toggleClass('nav-list-open');
- 
 
   });
- 
 
-   // fixed
-  
- 
-
-  formulario();
   sedes();
 
 
 }); 
-
-
-function formulario(){
-
-    $('input[type="text"], input[type="tel"], textarea')
-      .on('focus',function(){
-        $(this).removeClass('error');
-      })
-      .on('blur',function(){
-        $(this).removeClass('error');
-      });
-
-    $('input').keyup(function () {
-        var valid = $(this).attr('valid');
-        var inp = $(this);
-        switch (valid) {
-            case 'num':
-                inp.val(inp.val().replace(/[^0-9]/g, function () { return ''; }));
-                break;
-            case 'email':
-                inp.val(inp.val().replace(/[^a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ/@/./_/-]/g, function () { return ''; }));
-                break;
-        }
-    });
-
-    var blockForm=true;
-    $('form').on('submit', function(e){
-        e.preventDefault();
-        var error=0,
-            f=$(this),
-            validCorreo = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;;
-
-        $.each(f.find('input, select'), function(index, val) {
-            $.trim($(this).val())==='' && $(this).attr('no')===undefined && $(this).addClass('error') && error++;
-        });
-
-        //$.trim($('#inputTerminos').val())==='' && $('.formulario__input--check').addClass('error') && error++;
-        //$.trim(f.find('#dni').val()).length<8 && $('#dni').addClass('error') && error++ ;
-        //!validCorreo.test($('#email').val()) && $('#email').addClass('error') && error++;
-        if(error==0&&blockForm){
-            blockForm=false;
-            $.ajax({ url: 'process.php', type: 'POST', dataType: 'json', data: f.serializeArray() })
-                .done(function(data) {
-                    if(data.rpta==='ok') {
-                      blockForm=true;
-                        $('#hv_pg2form').removeClass('hv_pg2form_view');
-                        $('body').removeClass('hv_movil');
-                        $('input[name="nombres"], input[name="apellidos"], input[name="numerodocumento"], input[name="celular"], input[name="correo"]').val('');
-                        $('.gracias').fadeIn(350);
-                    }
-                });
-        }
-    });
-}
 
 function sedes(){
   var sedes = [
