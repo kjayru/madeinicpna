@@ -1,0 +1,24 @@
+{
+    "name": "front-ipcna",
+    "description": "Landing madeinIpcna",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Wile Tinoco",
+            "email": "wile.tinoco@havas.com"
+        }
+    ],
+    "require": {
+      
+       
+        "illuminate/database": "^5.7"
+        
+    },
+    "autoload": {
+        "psr-4": {
+           "Controllers\\": "app/controllers/",
+           "Models\\": "app/models" 
+               }
+   
+    }
+}
